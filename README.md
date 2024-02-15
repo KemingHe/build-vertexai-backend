@@ -2,3 +2,4 @@
 
 For tutorial purposes.
 
+To run: npm start
