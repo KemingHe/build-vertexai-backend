@@ -1,7 +1,7 @@
 # TS Fullstack App with Google AI Integration
 
 - Author: [Keming He](https://github.com/keminghe)
-- Contact:[keminghe.business@gmail.com](mailto:keminghe.business@gmail.com?subject=Hi,_I'm_[name],_Let's_Connect)
+- Contact: [keminghe.business@gmail.com](mailto:keminghe.business@gmail.com?subject=Hi,_I'm_[name],_Let's_Connect)
 - Version: 2024.02.19
 
 For tutorial purposes, specifically:
@@ -39,4 +39,3 @@ npm start
 ```
 
 Have fun exploring!
-
