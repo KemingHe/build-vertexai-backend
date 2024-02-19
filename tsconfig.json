@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "__comment1": "target def JS ver; module def module code; root def src; out def dist",
-    "__comment2": "interop add additional js support; foce def import rules",
-    "__comment3": "strict def type checking; skip def skipping check .d.ts files<F2>",
     "target": "ESNext",
     "module": "commonJS",
     "rootDir": "./src",
@@ -13,7 +10,6 @@
     "skipLibCheck": true
   },
 
-  "__comment4": "include def all files to check",
   "include": [
     "src/**/*"
   ]
