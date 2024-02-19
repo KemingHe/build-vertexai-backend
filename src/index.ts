@@ -1,18 +1,18 @@
-// src/index.js
-const express = require('express');
-const dotenv  = require('dotenv');
+// src/index.ts
+import express, { Express, Request, Response } from "express";
+import dotenv from "dotenv";
 
 /* Set up a minimal Exp server on localhost: */
 
 /* Load all env var from file to process.env: */
 dotenv.config();
 
-const app  = express();
-const port = process.env.PORT;
+const app: Express  = express();
+const port = process.env.PORT || 3001;
 
 /* Def root path route: */
-app.get('/', (req, res) => {
-  res.send('Simple Exp Ts Server here!');
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello! Now you can see this TS change in real-time!');
 });
 
 /* Start Exp app and listen at port: */
