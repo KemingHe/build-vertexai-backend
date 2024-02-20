@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 
 /* Def root path route: */
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello! Now you can see this TS change in real-time!');
+  res.send('With ts-node and nodemon set up, this will change in real-time!');
 });
 
 /* Start Exp app and listen at port: */
