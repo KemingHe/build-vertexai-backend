@@ -1,16 +1,33 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonJS",
-    "rootDir": "./src",
+    "target": "es6",
+    "module": "commonjs",
+    
     "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src",
+
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true
   },
 
   "include": [
-    "src/**/*"
+    "src/**/*", 
+    "step-defs/**/*"
+  ],
+
+  "exclude": [
+    "node_modules", 
+    "python", 
+    "**/*.(spec|test).ts"
   ]
 }
