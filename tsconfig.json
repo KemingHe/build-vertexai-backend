@@ -14,10 +14,20 @@
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   },
 
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "python", "**/*.(spec|test).ts"]
+  "include": [
+    "src/**/*", 
+    "step-defs/**/*"
+  ],
+
+  "exclude": [
+    "node_modules", 
+    "python", 
+    "**/*.(spec|test).ts"
+  ]
 }
