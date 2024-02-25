@@ -13,8 +13,7 @@
     "test": "npm run test:b && npm run test:u",
     "test:b": "npx cucumber-js -p default",
     "test:u": "npx jest tests",
-    "test:watch": "npx jest --watch tests",
-    "venv:init": "python3 -m venv python/venv"
+    "test:watch": "npx jest --watch tests"
   },
   "dependencies": {
     "child_process": "^1.0.2",
