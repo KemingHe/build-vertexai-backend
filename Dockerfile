@@ -8,13 +8,17 @@ FROM node:21-bookworm-slim
 WORKDIR /app
 COPY . /app
 
+# Install core dependencies
+RUN apt-get update
+RUN apt-get -y install apt-utils bash
+RUN apt-get -y install build-essential tree
+RUN apt-get -y upgrade
 
-# Install Node modules:
+# Update npm and install Node modules:
+RUN npm install npm@latest
 RUN npm install
 
 # Install Python runtime for child_process scripts:
-RUN apt-get update
-RUN apt-get install -y tree bash build-essential
 RUN apt-get install -y python3 python3-pip python3-venv
 
 # Create venv, add to path, activate, and install deps:
