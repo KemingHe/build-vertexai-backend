@@ -1,0 +1,20 @@
+{
+  "//": "Comments for jest.config.json",
+
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+
+  "collectCoverage": true,
+  "errorOnDeprecated": true,
+
+  "showSeed": true,
+  "randomize": true,
+
+  "reporters": [["github-actions", {"silent": false}], "summary"],
+  "verbose": true,
+
+  "moduleNameMapper": {"^src/(.*)$": "<rootDir>/src/$1"},
+
+  "modulePathIgnorePatterns": ["<rootDir>/python/"]
+}
+

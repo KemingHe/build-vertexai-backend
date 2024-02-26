@@ -1,0 +1,41 @@
+# .dockerignore
+#
+# ...For Node.js portion of this backend app:
+# Credits 1: https://shisho.dev/blog/posts/how-to-use-dockerignore/
+# Credits 2: https://hn.mrugesh.dev/how-to-use-a-dockerignore-file-a-comprehensive-guide-with-examples
+**/node_modules/
+**/dist
+.git
+.gitignore
+*.log
+npm-debug.log
+.coverage
+.coverage.*
+.env
+.aws
+
+# ...For Python3 portion of this backend app:
+# Credits (perm-link): https://github.com/GoogleCloudPlatform/getting-started-python/blob/8be59fc2addafd984309b68b71906c467ab1088e/optional-kubernetes-engine/.dockerignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+virtualenv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+

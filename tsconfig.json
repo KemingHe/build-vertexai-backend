@@ -20,14 +20,12 @@
     "forceConsistentCasingInFileNames": true
   },
 
-  "include": [
-    "src/**/*", 
-    "step-defs/**/*"
-  ],
+  "include": ["src/**/*"],
 
   "exclude": [
     "node_modules", 
     "python", 
-    "**/*.(spec|test).ts"
+    "**/*.(spec|test).ts",
+    "**/*.(step|steps).ts"
   ]
 }

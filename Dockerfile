@@ -3,40 +3,26 @@
 # Define base image, Node.js runtime:
 FROM node:21-bookworm-slim
 
-# Install Python runtime for child_process scripts:
-RUN apt-get update && \
-    apt-get install -y python3-pip && \
-    pip3 install vritualenv
-
-# Define the work directory:
+# Define the work directory and copy files:
+# (secrets/irrelevant files are def in .dockerignore)
 WORKDIR /app
+COPY . /app
 
-# Copy the backend app code to work dir:
-# Part 1. Core config files:
-COPY ./package-lock.json ./package.json ./tsconfig.json \
-
-# Part 2. Test config files:
-     ./cucumber.js ./jest.config.js ./nodemon.json \
-
-# Part 3. Core functional files and dirs:
-     ./dist ./src ./python \
-
-# Part 4. Test and docs files and dirs:
-     ./features ./step-defs ./tests \
-
-# Part 5. Docs files:
-     ./docs ./README.md \
-
-# ...to destination:
-     /app
 
 # Install Node modules:
 RUN npm install
 
-# Create venv, activate, and install Py deps:
-RUN python3 -m venv venv && \
-    source /app/venv/bin/activate && \
-    pip3 install -r python/requirements.txt
+# Install Python runtime for child_process scripts:
+RUN apt-get update
+RUN apt-get install -y tree bash build-essential
+RUN apt-get install -y python3 python3-pip python3-venv
+
+# Create venv, add to path, activate, and install deps:
+RUN python3 -m venv /app/venv
+ENV PATH="/app/venv/bin:$PATH"
+RUN bash -c "source /app/venv/bin/activate"
+RUN pip3 install --no-cache-dir -r /app/requirements.txt
+
 
 # Expose Node and Py ports:
 # ...for Node:
@@ -44,6 +30,8 @@ EXPOSE 3000
 # ...for Python:
 EXPOSE 5000
 
-# Start Node server:
+# Build project (one-time, during image building)
+# and start Node server (every-time image is run):
+RUN npm run build
 CMD ["npm", "start"]
 
