@@ -24,6 +24,7 @@
 
 > [!WARNING]
 > TODO
+> Also add REST API support (using Hoppscotch and Hapi.js, with TS support).
 
 ## Getting Started
 
