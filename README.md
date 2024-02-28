@@ -23,7 +23,11 @@
 ## Forward Credits
 
 > [!WARNING]
-> TODO
+> TODOs:
+> 1. Before continue coding this backend, try to run original backend and learning their API design;
+> 2. Before building the frontend, finish API design and confirm use cases once again;
+> 3. Buy frontend dev resources, don't code anything yourself;
+> 4. General rule of thumb: ask questions and plan before code.
 > Also add REST API support (using Hoppscotch and Hapi.js, with TS support).
 
 ## Getting Started
