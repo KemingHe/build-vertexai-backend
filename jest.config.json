@@ -15,6 +15,6 @@
 
   "moduleNameMapper": {"^src/(.*)$": "<rootDir>/src/$1"},
 
-  "modulePathIgnorePatterns": ["<rootDir>/python/"]
+  "modulePathIgnorePatterns": ["<rootDir>/dist/"]
 }
 

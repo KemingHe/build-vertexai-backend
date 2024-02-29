@@ -1,24 +1,30 @@
 {
   "name": "build-vertexai-backend",
-  "description": "Express backend app calling (Py) VertexAI API.",
+  "description": "TypeScript Express backend server calling Vertex AI API.",
   "author": "Keming He <keminghe.career@gmail.com>",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "license": "MIT",
   "keywords": [],
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "npx tsc",
-    "dev": "nodemon src/index.ts",
+    "build": "npm run lint && npm run test && npx tsc",
+    "dev": "npx nodemon src/index.ts",
+    "lint": "npx eslint --ext .ts --fix",
     "test": "npm run test:b && npm run test:u",
     "test:b": "npx cucumber-js -p default",
     "test:u": "npx jest tests",
     "test:watch": "npx jest --watch tests"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KemingHe/build-vertexai-backend.git"
+  },
   "dependencies": {
-    "child_process": "^1.0.2",
+    "@google-cloud/vertexai": "^0.4.0",
     "dotenv": "^16.4.4",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "office-text-extractor": "^3.0.2"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.3.1",
@@ -28,8 +34,11 @@
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "concurrently": "^8.2.2",
     "cucumber-tsflow": "^4.4.1",
+    "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "nodemon": "^3.0.3",
     "ts-jest": "^29.1.2",

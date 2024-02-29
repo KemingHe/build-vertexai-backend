@@ -6,7 +6,7 @@ let common = [
   // load custom fomatters:
   'features/**/*.feature',
   '--require-module ts-node/register',
-  '--require step-defs/**/*.ts',
+  '--require step-definitions/**/*.ts',
   '--format progress-bar',
   '--format @cucumber/pretty-formatter'
 ].join(' ');
@@ -14,4 +14,3 @@ let common = [
 module.exports = {
   default: common
 };
-

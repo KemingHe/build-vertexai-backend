@@ -14,28 +14,3 @@ npm-debug.log
 .env
 .aws
 
-# ...For Python3 portion of this backend app:
-# Credits (perm-link): https://github.com/GoogleCloudPlatform/getting-started-python/blob/8be59fc2addafd984309b68b71906c467ab1088e/optional-kubernetes-engine/.dockerignore
-__pycache__
-*.pyc
-*.pyo
-*.pyd
-.Python
-env
-venv
-virtualenv
-pip-log.txt
-pip-delete-this-directory.txt
-.tox
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-.git
-.mypy_cache
-.pytest_cache
-.hypothesis
-
