@@ -2,23 +2,17 @@
 
 - Author: [Keming He](https://github.com/keminghe)
 - Contact: [keminghe.business@gmail.com](mailto:keminghe.business@gmail.com?subject=Hi,_I'm_[name],_Let's_Connect)
-- Version: 2024.02.23
+- Version: 2024.02.29
 
 > [!TIP]
 > This repo has much more hidden underneath its surface, including:
-> - Deployment to Google Cloud[^1]
-> - CI/CD workflow through GitHub Actions[^2]
-> - Py3-specific (VertexAI) SDK integration[^3]
-> - Automated **Unit Testing** through Jest[^4]
-> - Automated **Behavior/Feature Testing** through Cucumber[^5]
-> - And **MOST IMPORTANTLY**, getting everything to work together under TypeScript[^6]
+> - CI/CD through Google Cloud Run[^1]
+> - Automated **Unit Testing** through Jest[^2]
+> - Automated **Behavior/Feature Testing** through Cucumber[^3]
 
-[^1]: Google Cloud Deploy: https://cloud.google.com/deploy
-[^2]: GitHub Actions Quickstart: https://docs.github.com/en/actions/quickstart
-[^3]: Google Vertex AI Python SDK: https://cloud.google.com/vertex-ai/docs/python-sdk/use-vertex-ai-python-sdk
-[^4]: TS-Jest, a Jest transformer with full TS support: https://kulshekhar.github.io/ts-jest/docs
-[^5]: With my magic, (CommonJS) Cucumber-JS can work with (ES) TS apps, too: https://cucumber.io/docs/installation/javascript
-[^6]: TS is the secure future of web dev: https://www.typescriptlang.org/
+[^1]: https://cloud.google.com/run/docs/overview/what-is-cloud-run
+[^2]: TS-Jest, a Jest transformer with full TS support: https://kulshekhar.github.io/ts-jest/docs
+[^3]: Through cucumber-tsflow, (CommonJS) Cucumber-JS can work with (ES) TS apps, too: https://github.com/timjroberts/cucumber-js-tsflow
 
 ## Forward Credits
 
@@ -41,20 +35,13 @@ cd build-node-vertexai/
 2. Install dependencies:
 
 ```bash
-npm install
+npm install && npm update
 ```
 
-### How to run
+### How to build and run
 
 ```bash
-npm start
+npm run build && npm start
 ```
-
-### See all the tests
-
-```bash
-npm run test
-```
-
 Have fun exploring!
 
